@@ -1,5 +1,5 @@
 {
-  "name": "ts-xlsx",
+  "name": "ts-xlsx-edit",
   "version": "0.1.0",
   "description": "Read, edit, and save existing Excel (.xlsx) files in Node — a TypeScript port of openpyxl.",
   "license": "MIT",
@@ -21,6 +21,7 @@
   ],
   "keywords": [
     "xlsx",
+    "ts-xlsx",
     "excel",
     "openpyxl",
     "spreadsheet",

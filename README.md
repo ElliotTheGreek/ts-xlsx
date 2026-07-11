@@ -1,5 +1,9 @@
 # ts-xlsx — Developer Guide
 
+> **Published on npm as [`ts-xlsx-edit`](https://www.npmjs.com/package/ts-xlsx-edit)**
+> (`npm install ts-xlsx-edit`). The bare `ts-xlsx` name was already taken; the repo
+> and local directory stay `ts-xlsx`, mirroring the `ts-pdf` → `ts-pdf-edit` precedent.
+
 A pure-TypeScript port of **openpyxl**: open an existing `.xlsx`, read/edit cells,
 styles, formulas, sheets, merges, conditional formatting, data validation,
 hyperlinks, defined names, images and core properties, and save it back
@@ -288,7 +292,7 @@ hyperlink relationships in v1 (cell content + structure are copied).
 ## Appendix — usage at a glance
 
 ```ts
-import { Workbook, Font, PatternFill } from "ts-xlsx";
+import { Workbook, Font, PatternFill } from "ts-xlsx-edit";
 
 const wb = await Workbook.open("model.xlsx");   // path | Uint8Array | ArrayBuffer
 const ws = wb.active;                            // or wb.get("Sheet1")
