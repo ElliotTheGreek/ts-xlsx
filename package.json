@@ -1,0 +1,69 @@
+{
+  "name": "ts-xlsx",
+  "version": "0.1.0",
+  "description": "Read, edit, and save existing Excel (.xlsx) files in Node — a TypeScript port of openpyxl.",
+  "license": "MIT",
+  "author": "FlowDot LLC",
+  "contributors": [
+    "Elliot Mousseau <elliot@flowdot.ai>"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "xlsx",
+    "excel",
+    "openpyxl",
+    "spreadsheet",
+    "spreadsheetml",
+    "ooxml",
+    "office",
+    "openxml",
+    "workbook",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElliotTheGreek/ts-xlsx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ElliotTheGreek/ts-xlsx/issues"
+  },
+  "homepage": "https://github.com/ElliotTheGreek/ts-xlsx#readme",
+  "scripts": {
+    "clean": "rimraf dist coverage",
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "verify-pack": "node scripts/verify-pack.mjs",
+    "prepublishOnly": "npm run clean && npm run lint && npm test && npm run build && npm run verify-pack"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^9.15.0",
+    "globals": "^15.12.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.0",
+    "typescript-eslint": "^8.15.0",
+    "vitest": "^3.2.4"
+  }
+}
